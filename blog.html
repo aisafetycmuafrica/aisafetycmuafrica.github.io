@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — ASICA</title>
+    <meta
+      name="description"
+      content="Capstone write-ups, hackathon findings, and event recaps from the ASICA community."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a class="nav__brand" href="index.html">
+          <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+          <span class="nav__brand-tag">AI Safety Initiative at CMU Africa</span>
+        </a>
+        <div class="nav__right">
+          <nav class="nav__links" aria-label="Primary">
+            <a href="index.html" class="">Home</a>
+            <a href="about.html" class="">About</a>
+            <details class="nav__dropdown">
+              <summary>Programs <span class="chev"></span></summary>
+              <div class="nav__dropdown-menu">
+                <a href="programs/alignment-fundamentals.html"
+                  >AI Alignment Fundamentals<span class="menu-tag"
+                    >Fundamentals</span
+                  ></a
+                >
+                <a href="programs/research-fellowship.html"
+                  >Research Fellowship<span class="menu-tag"
+                    >Post-Fundamentals</span
+                  ></a
+                >
+                <a href="programs/research-scholars.html"
+                  >Research Scholars<span class="menu-tag">Invite-only</span></a
+                >
+                <a href="programs/seminar.html"
+                  >AI Safety Seminar<span class="menu-tag">Ongoing</span></a
+                >
+                <a href="programs/hackathon.html"
+                  >Hackathon<span class="menu-tag">Once a semester</span></a
+                >
+              </div>
+            </details>
+            <a href="get-involved.html" class="">Get Involved</a>
+            <a href="events.html" class="">Events</a>
+            <a href="blog.html" class="is-current">Blog</a>
+          </nav>
+          <a class="btn btn--small btn--solid nav__join" href="#join"
+            >Join Community</a
+          >
+        </div>
+        <button
+          class="nav__burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <details>
+          <summary>Programs</summary>
+          <div>
+            <a href="programs/alignment-fundamentals.html"
+              >AI Alignment Fundamentals</a
+            >
+            <a href="programs/research-fellowship.html">Research Fellowship</a>
+            <a href="programs/research-scholars.html">Research Scholars</a>
+            <a href="programs/seminar.html">AI Safety Seminar</a>
+            <a href="programs/hackathon.html">Hackathon</a>
+          </div>
+        </details>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn btn--small btn--solid nav__join-mobile" href="#join"
+          >Join Community</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero--page">
+        <div class="hero__inner">
+          <p class="eyebrow">Blog</p>
+          <h1 class="hero__headline hero__headline--sm">
+            Notes from the community
+          </h1>
+          <p class="hero__sub">
+            Capstone write-ups, hackathon findings, and event recaps will land
+            here once cohorts get underway.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <p style="color: var(--muted)">
+            Nothing published yet , check back after the first Fundamentals
+            cohort wraps, or
+            <a
+              href="#join"
+              style="color: var(--teal); text-decoration: underline"
+              >join the mailing list</a
+            >
+            to hear when a new post goes up.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="join">
+        <div class="section__inner section__inner--split">
+          <div>
+            <span class="eyebrow--sm">Stay in the loop</span>
+            <h2>Join our mailing list</h2>
+            <p class="section__intro">
+              Get notified when applications open, a speaker is confirmed, or a
+              cohort's capstones go live. No spam, unsubscribe anytime.
+            </p>
+          </div>
+          <div>
+            <div class="form-cta form-cta--dark form-cta--compact">
+              <h3>Sign up in about 30 seconds</h3>
+              <p>Opens the ASICA mailing list form in a new tab.</p>
+              <a
+                class="btn btn--solid"
+                href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form"
+                target="_blank"
+                rel="noopener"
+                >Open sign-up form &#8599;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__mark">ASICA</span>
+          <span class="footer__brand-tag"
+            >AI Safety Initiative at CMU Africa</span
+          >
+        </div>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="blog.html">Blog</a>
+          <a href="mailto:hello@asica.example">Email us</a>
+        </div>
+        <p class="footer__fine">
+          Piloting Fall 2026 under the CMU Africa Research Club
+        </p>
+      </div>
+    </footer>
+    <script src="assets/script.js"></script>
+  </body>
+</html>

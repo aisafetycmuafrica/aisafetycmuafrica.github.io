@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASICA</title>
+<meta name="description" content="ASICA brings together researchers, engineers, and policy thinkers to close the gap between AI capability and our ability to evaluate, align, and govern it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">
+      <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+      <span class="nav__brand-tag">AI Safety Initiative at CMU Africa</span>
+    </a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html" class=" is-current">Home</a>
+        <a href="about.html" class="">About</a>
+        <details class="nav__dropdown">
+          <summary>Programs <span class="chev"></span></summary>
+          <div class="nav__dropdown-menu">
+            <a href="programs/alignment-fundamentals.html">AI Alignment Fundamentals<span class="menu-tag">Fundamentals</span></a>
+      <a href="programs/research-fellowship.html">Research Fellowship<span class="menu-tag">Post-Fundamentals</span></a>
+      <a href="programs/research-scholars.html">Research Scholars<span class="menu-tag">Invite-only</span></a>
+      <a href="programs/seminar.html">AI Safety Seminar<span class="menu-tag">Ongoing</span></a>
+      <a href="programs/hackathon.html">Hackathon<span class="menu-tag">Once a semester</span></a>
+          </div>
+        </details>
+        <a href="get-involved.html" class="">Get Involved</a>
+        <a href="events.html" class="">Events</a>
+        <a href="blog.html" class="">Blog</a>
+      </nav>
+      <a class="btn btn--small btn--solid nav__join" href="#join">Join Community</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <details>
+      <summary>Programs</summary>
+      <div>
+        <a href="programs/alignment-fundamentals.html">AI Alignment Fundamentals</a>
+        <a href="programs/research-fellowship.html">Research Fellowship</a>
+        <a href="programs/research-scholars.html">Research Scholars</a>
+        <a href="programs/seminar.html">AI Safety Seminar</a>
+        <a href="programs/hackathon.html">Hackathon</a>
+      </div>
+    </details>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="blog.html">Blog</a>
+    <a class="btn btn--small btn--solid nav__join-mobile" href="#join">Join Community</a>
+  </nav>
+</header>
+<main>
+
+<section class="hero">
+  <div class="hero__inner">
+    <p class="eyebrow">AI Safety &middot; Alignment &middot; CMU Africa</p>
+    <h1 class="hero__headline">AI capabilities are advancing faster than our ability to evaluate, align, or govern them.</h1>
+    <p class="hero__sub">ASICA brings together researchers, engineers, and policy thinkers to build the technical and governance tools that let us evaluate systems before deployment, not after.</p>
+    <div class="hero__cta">
+      <a href="get-involved.html" class="btn btn--solid">Get involved</a>
+      <a href="#join" class="btn btn--ghost">Join our mailing list</a>
+    </div>
+  </div>
+  <div class="hero__chart" aria-hidden="true">
+  <svg viewBox="0 0 640 340" class="gapchart" role="img" aria-label="Chart showing AI capability rising much faster than governance capacity, with the widening gap between them shaded">
+    <defs>
+      <linearGradient id="gapfill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#D96C4F" stop-opacity="0.32"/>
+        <stop offset="100%" stop-color="#D96C4F" stop-opacity="0.04"/>
+      </linearGradient>
+    </defs>
+    <g class="grid"><line x1="0" y1="70" x2="640" y2="70"></line><line x1="0" y1="150" x2="640" y2="150"></line><line x1="0" y1="230" x2="640" y2="230"></line></g>
+    <path class="gap-fill" fill="url(#gapfill)" d="M20,300 C160,280 260,230 340,150 C420,70 520,40 620,20 L620,300 C520,300 420,300 340,300 C260,300 160,300 20,300 Z"/>
+    <path class="line line--gov" fill="none" d="M20,300 C160,296 320,286 460,272 C520,266 580,258 620,250"/>
+    <path class="line line--cap" fill="none" d="M20,300 C160,280 260,230 340,150 C420,70 520,40 620,20"/>
+    <circle class="dot dot--cap" cx="620" cy="20" r="5"></circle>
+    <circle class="dot dot--gov" cx="620" cy="250" r="5"></circle>
+    <text x="440" y="34" class="chart-label chart-label--cap">AI capability</text>
+    <text x="360" y="314" class="chart-label chart-label--gov">Evaluation capacity</text>
+    <text x="255" y="248" class="chart-label chart-label--gap">the gap</text>
+  </svg>
+</div>
+</section>
+
+<section class="section">
+  <div class="section__inner section__inner--narrow">
+    <span class="eyebrow--sm">What we're working toward</span>
+    <h2>A self-sustaining research community that produces real technical outputs, not just awareness.</h2>
+    <p style="color:var(--muted); margin-top:1rem;">Success looks like reducing the catastrophic risk of AI before deployment, not just attendance numbers. We want members leaving with a concrete portfolio, a capstone project, a hackathon submission, maybe a co-authored paper, and a clear next step, whether that's a global fellowship or a research role of their own.</p>
+    <p style="margin-top:1.5rem;"><a href="about.html" class="btn btn--text">More about ASICA &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="section__inner">
+    <span class="eyebrow--sm">What we do</span>
+    <h2>Research, education, and events</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Research</h3>
+        <p>Members contribute to real safety work, red-teaming, evaluations, and alignment research, individually through the Research Fellowship or on faculty-mentored projects.</p>
+      </div>
+      <div class="pillar">
+        <h3>Education</h3>
+        <p>A structured Fundamentals track takes members from the core literature to their own capstone project.</p>
+      </div>
+      <div class="pillar">
+        <h3>Events</h3>
+        <p>A recurring AI Safety Seminar and a semester hackathon bring the community together and connect members with practitioners in the field.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__inner">
+    <span class="eyebrow--sm">What members gain</span>
+    <h2>What you'll walk away with</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Technical literacy</h3>
+        <p>Structured grounding in alignment, not just exposure.</p>
+      </div>
+      <div class="pillar">
+        <h3>Real research experience</h3>
+        <p>A mentored pipeline from reading group to independent research to faculty-mentored projects.</p>
+      </div>
+      <div class="pillar">
+        <h3>Career pathways</h3>
+        <p>Direct routes into MATS, SPAR, Apart Research sprints, BlueDot AGISF, and GovAI-style programs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted" id="programs">
+  <div class="section__inner">
+    <span class="eyebrow--sm">Programs</span>
+    <h2>Find your track</h2>
+    <p class="section__intro">Start with Fundamentals, then a research pipeline opens up as you go further.</p>
+    <div class="track-grid">
+      <article class="track-card">
+        <div class="track-card__top"><span class="track-card__tag">Fundamentals</span></div>
+        <h3>AI Alignment Fundamentals</h3>
+        <a class="track-card__link" href="programs/alignment-fundamentals.html">Learn more &rarr;</a>
+      </article><article class="track-card">
+        <div class="track-card__top"><span class="track-card__tag">Post-Fundamentals</span></div>
+        <h3>Research Fellowship</h3>
+        <a class="track-card__link" href="programs/research-fellowship.html">Learn more &rarr;</a>
+      </article><article class="track-card">
+        <div class="track-card__top"><span class="track-card__tag">Invite-only</span></div>
+        <h3>Research Scholars</h3>
+        <a class="track-card__link" href="programs/research-scholars.html">Learn more &rarr;</a>
+      </article><article class="track-card">
+        <div class="track-card__top"><span class="track-card__tag">Ongoing</span></div>
+        <h3>AI Safety Seminar</h3>
+        <a class="track-card__link" href="programs/seminar.html">Learn more &rarr;</a>
+      </article><article class="track-card">
+        <div class="track-card__top"><span class="track-card__tag">Once a semester</span></div>
+        <h3>Hackathon</h3>
+        <a class="track-card__link" href="programs/hackathon.html">Learn more &rarr;</a>
+      </article>
+    </div>
+    <p style="margin-top:2rem;"><a href="get-involved.html" class="btn btn--text">See all programs &amp; how to apply &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section" id="partners-local">
+  <div class="section__inner">
+    <span class="eyebrow--sm">Partners</span>
+    <h2>Who we're working with</h2>
+    <p class="section__intro">ASICA doesn't run alone, this pilot semester is hosted in partnership with an existing CMU Africa student organization.</p>
+    <div class="partner-card">
+      <img class="partner-card__logo" src="assets/img/cmu-research-club.png" alt="CMU Africa Research Club logo">
+      <div class="partner-card__body">
+        <h3>CMU Africa Research Club</h3>
+        <p>ASICA is piloting for Fall 2026 as a program under the CMU Africa Research Club, before pursuing independent registration.</p>
+        <a href="https://researchclubcmuafrica.github.io/" target="_blank" rel="noopener">researchclubcmuafrica.github.io &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="partners">
+  <div class="section__inner">
+    <span class="eyebrow--sm">Part of a global effort</span>
+    <h2>Who we're working to connect with</h2>
+    <p class="section__intro">Our goal is to build real relationships with the organizations already leading AI safety, alignment, and work from frontier labs to the fellowships our members are working toward.</p>
+    <div class="partner-row" role="list">
+      <span role="listitem">Anthropic</span>
+      <span role="listitem">OpenAI</span>
+      <span role="listitem">Google DeepMind</span>
+      <span role="listitem">BlueDot Impact</span>
+      <span role="listitem">Apart Research</span>
+      <span role="listitem">GovAI</span>
+      <span role="listitem">Redwood Research</span>
+      <span role="listitem">Eleos AI Research</span>
+      <span role="listitem">MATS</span>
+      <span role="listitem">SPAR</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="section__inner section__inner--narrow">
+    <span class="eyebrow--sm">Right now</span>
+    <p style="color:var(--muted)">We're piloting for Fall 2026 as a program under the CMU Africa Research Club, before pursuing independent registration. That means lower overhead while we prove out the model, the programs, cohorts, and events run exactly as planned either way.</p>
+    <p style="margin-top:1.5rem;"><a href="get-involved.html" class="btn btn--text">Get involved &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section section--dark" id="join">
+  <div class="section__inner section__inner--split">
+    <div>
+      <span class="eyebrow--sm">Stay in the loop</span>
+      <h2>Join our mailing list</h2>
+      <p class="section__intro">Get notified when applications open, a speaker is confirmed, or a cohort's capstones go live. No spam, unsubscribe anytime.</p>
+    </div>
+    <div>
+      <div class="form-cta form-cta--dark form-cta--compact">
+        <h3>Sign up in about 30 seconds</h3>
+        <p>Opens the ASICA mailing list form in a new tab.</p>
+        <a class="btn btn--solid" href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form" target="_blank" rel="noopener">Open sign-up form &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="footer__mark">ASICA</span>
+      <span class="footer__brand-tag">AI Safety Initiative at CMU Africa</span>
+    </div>
+    <div class="footer__links">
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="blog.html">Blog</a>
+      <a href="mailto:hello@asica.example">Email us</a>
+    </div>
+    <p class="footer__fine">Piloting Fall 2026 under the CMU Africa Research Club</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

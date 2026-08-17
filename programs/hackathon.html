@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon — ASICA</title>
+    <meta
+      name="description"
+      content="An Apart Research-style sprint - a short window to produce a concrete red-team finding or eval."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a class="nav__brand" href="../index.html">
+          <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+          <span class="nav__brand-tag">AI Safety Initiative at CMU Africa</span>
+        </a>
+        <div class="nav__right">
+          <nav class="nav__links" aria-label="Primary">
+            <a href="../index.html" class="">Home</a>
+            <a href="../about.html" class="">About</a>
+            <details class="nav__dropdown">
+              <summary>Programs <span class="chev"></span></summary>
+              <div class="nav__dropdown-menu">
+                <a href="../programs/alignment-fundamentals.html"
+                  >AI Alignment Fundamentals<span class="menu-tag"
+                    >Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-fellowship.html"
+                  >Research Fellowship<span class="menu-tag"
+                    >Post-Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-scholars.html"
+                  >Research Scholars<span class="menu-tag">Invite-only</span></a
+                >
+                <a href="../programs/seminar.html"
+                  >AI Safety Seminar<span class="menu-tag">Ongoing</span></a
+                >
+                <a href="../programs/hackathon.html"
+                  >Hackathon<span class="menu-tag">Once a semester</span></a
+                >
+              </div>
+            </details>
+            <a href="../get-involved.html" class="">Get Involved</a>
+            <a href="../events.html" class="">Events</a>
+            <a href="../blog.html" class="">Blog</a>
+          </nav>
+          <a class="btn btn--small btn--solid nav__join" href="#join"
+            >Join Community</a
+          >
+        </div>
+        <button
+          class="nav__burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <details>
+          <summary>Programs</summary>
+          <div>
+            <a href="../programs/alignment-fundamentals.html"
+              >AI Alignment Fundamentals</a
+            >
+            <a href="../programs/research-fellowship.html"
+              >Research Fellowship</a
+            >
+            <a href="../programs/research-scholars.html">Research Scholars</a>
+            <a href="../programs/seminar.html">AI Safety Seminar</a>
+            <a href="../programs/hackathon.html">Hackathon</a>
+          </div>
+        </details>
+        <a href="../get-involved.html">Get Involved</a>
+        <a href="../events.html">Events</a>
+        <a href="../blog.html">Blog</a>
+        <a class="btn btn--small btn--solid nav__join-mobile" href="#join"
+          >Join Community</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="section section--tight">
+        <div class="section__inner">
+          <p class="crumb">
+            <a href="../index.html">Home</a> /
+            <a href="../index.html#programs">Programs</a> / Hackathon
+          </p>
+          <div class="track-card__top" style="margin-bottom: 1rem">
+            <span class="track-card__tag">Once a semester</span>
+            <span class="status status--open">Once a semester</span>
+          </div>
+          <h1
+            class="hero__headline hero__headline--sm"
+            style="margin-bottom: 0.75rem"
+          >
+            Hackathon
+          </h1>
+          <p class="hero__sub" style="margin-bottom: 0">
+            An Apart Research-style sprint , a short window to produce a
+            concrete red-team finding or eval.
+          </p>
+
+          <div class="detail-grid">
+            <div>
+              <h2 style="font-size: 1.15rem; margin-top: 2.5rem">Overview</h2>
+              <p style="color: var(--muted); margin-top: 1rem">
+                Compresses the Research Fellowship&rsquo;s whole arc , pick a
+                question, do the work, present it , into a single weekend, using
+                a real model instead of a hypothetical one.
+              </p>
+
+              <h2 style="font-size: 1.15rem; margin-top: 2.25rem">
+                What it involves
+              </h2>
+              <ul class="detail-list" style="margin-top: 1.25rem">
+                <li>
+                  Red-team, evaluate, or probe a real model in one weekend
+                </li>
+                <li>Work in small teams; present findings at the end</li>
+                <li>Best findings can seed a Research Fellowship project</li>
+                <li>Open-weight models and compute provided</li>
+              </ul>
+
+              <h2 style="font-size: 1.15rem; margin-top: 2.25rem">
+                Why it matters
+              </h2>
+              <p style="color: var(--muted); margin-top: 1rem">
+                Red-teaming and evals are some of the most in-demand,
+                learnable-by-doing skills in this field right now. A weekend
+                sprint is a low-commitment way to find out if that kind of work
+                is for you, before committing a whole semester to the
+                Fellowship.
+              </p>
+
+              <h2 style="font-size: 1.15rem; margin-top: 2.25rem">
+                Topics you&rsquo;ll cover
+              </h2>
+              <div class="partner-row" style="margin-top: 1.1rem">
+                <span>Red-teaming a live model</span
+                ><span>Writing a short eval</span
+                ><span>Presenting a finding clearly and fast</span
+                ><span>Scoring &amp; write-up format</span>
+              </div>
+
+              <h2 style="font-size: 1.15rem; margin-top: 2.25rem">
+                What you&rsquo;ll leave with
+              </h2>
+              <p style="color: var(--muted); margin-top: 1rem">
+                You&rsquo;ll leave with one concrete artifact from a single
+                weekend, and maybe the seed of a Fellowship project.
+              </p>
+            </div>
+            <aside class="side-card">
+              <dl>
+                <dt>Format</dt>
+                <dd>Weekend sprint</dd>
+                <dt>Cadence</dt>
+                <dd>Once a semester</dd>
+                <dt>Time commitment</dt>
+                <dd>One weekend</dd>
+                <dt>Who it's for</dt>
+                <dd>All members</dd>
+              </dl>
+              <a class="btn btn--solid" href="../get-involved.html"
+                >Apply now</a
+              >
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="join">
+        <div class="section__inner section__inner--split">
+          <div>
+            <span class="eyebrow--sm">Stay in the loop</span>
+            <h2>Join our mailing list</h2>
+            <p class="section__intro">
+              Get notified when applications open, a speaker is confirmed, or a
+              cohort's capstones go live. No spam, unsubscribe anytime.
+            </p>
+          </div>
+          <div>
+            <div class="form-cta form-cta--dark form-cta--compact">
+              <h3>Sign up in about 30 seconds</h3>
+              <p>Opens the ASICA mailing list form in a new tab.</p>
+              <a
+                class="btn btn--solid"
+                href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form"
+                target="_blank"
+                rel="noopener"
+                >Open sign-up form &#8599;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__mark">ASICA</span>
+          <span class="footer__brand-tag"
+            >AI Safety Initiative at CMU Africa</span
+          >
+        </div>
+        <div class="footer__links">
+          <a href="../about.html">About</a>
+          <a href="../events.html">Events</a>
+          <a href="../get-involved.html">Get Involved</a>
+          <a href="../blog.html">Blog</a>
+          <a href="mailto:hello@asica.example">Email us</a>
+        </div>
+        <p class="footer__fine">
+          Piloting Fall 2026 under the CMU Africa Research Club
+        </p>
+      </div>
+    </footer>
+    <script src="../assets/script.js"></script>
+  </body>
+</html>

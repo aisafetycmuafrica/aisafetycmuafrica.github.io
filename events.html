@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — ASICA</title>
+<meta name="description" content="ASICA's semester calendar: Fundamentals cohorts, the AI Safety Seminar, and the semester hackathon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">
+      <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+      <span class="nav__brand-tag">AI Safety Initiative at CMU Africa</span>
+    </a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="">About</a>
+        <details class="nav__dropdown">
+          <summary>Programs <span class="chev"></span></summary>
+          <div class="nav__dropdown-menu">
+            <a href="programs/alignment-fundamentals.html">AI Alignment Fundamentals<span class="menu-tag">Fundamentals</span></a>
+      <a href="programs/research-fellowship.html">Research Fellowship<span class="menu-tag">Post-Fundamentals</span></a>
+      <a href="programs/research-scholars.html">Research Scholars<span class="menu-tag">Invite-only</span></a>
+      <a href="programs/seminar.html">AI Safety Seminar<span class="menu-tag">Ongoing</span></a>
+      <a href="programs/hackathon.html">Hackathon<span class="menu-tag">Once a semester</span></a>
+          </div>
+        </details>
+        <a href="get-involved.html" class="">Get Involved</a>
+        <a href="events.html" class=" is-current">Events</a>
+        <a href="blog.html" class="">Blog</a>
+      </nav>
+      <a class="btn btn--small btn--solid nav__join" href="#join">Join Community</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <details>
+      <summary>Programs</summary>
+      <div>
+        <a href="programs/alignment-fundamentals.html">AI Alignment Fundamentals</a>
+        <a href="programs/research-fellowship.html">Research Fellowship</a>
+        <a href="programs/research-scholars.html">Research Scholars</a>
+        <a href="programs/seminar.html">AI Safety Seminar</a>
+        <a href="programs/hackathon.html">Hackathon</a>
+      </div>
+    </details>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="blog.html">Blog</a>
+    <a class="btn btn--small btn--solid nav__join-mobile" href="#join">Join Community</a>
+  </nav>
+</header>
+<main>
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <p class="eyebrow">Events</p>
+    <h1 class="hero__headline hero__headline--sm">Semester at a glance</h1>
+    <p class="hero__sub">Based on a standard 15-week semester. Seminar talks and the hackathon are open to the whole community.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="section__inner">
+    <span class="eyebrow--sm">Coming up</span>
+    <div class="event-card">
+      <div><span class="event-card__date">Weeks 1&ndash;2</span><h3>Kickoff info session</h3></div>
+      <a class="btn btn--small btn--ghost" href="get-involved.html">Apply</a>
+    </div>
+    <div class="event-card">
+      <div><span class="event-card__date">Week 6</span><h3>Mid-semester hackathon</h3></div>
+      <a class="btn btn--small btn--ghost" href="programs/hackathon.html">Details</a>
+    </div>
+    <div class="event-card">
+      <div><span class="event-card__date">Biweekly</span><h3>AI Safety Seminar</h3></div>
+      <a class="btn btn--small btn--ghost" href="programs/seminar.html">Details</a>
+    </div>
+
+    <!--
+      Optional: embed a live Google Calendar the same way AISI (Georgia Tech) does.
+      Google Calendar → Settings → this calendar → "Integrate calendar" → copy the
+      embed src and drop it in an iframe here.
+    -->
+    <!--
+    <div class="calendar-embed">
+      <iframe src="REPLACE_WITH_GOOGLE_CALENDAR_EMBED_SRC" style="border:0" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+    -->
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="section__inner">
+    <span class="eyebrow--sm">Full arc</span>
+    <h2>How the semester runs</h2>
+    <ol class="timeline">
+      <li class="timeline__item"><span class="timeline__when">Weeks 1&ndash;2</span><span class="timeline__what">Recruitment: Core Membership &amp; Track applications open, kickoff info session</span></li>
+      <li class="timeline__item"><span class="timeline__when">Weeks 3&ndash;10</span><span class="timeline__what">Weekly Fundamentals cohorts run in parallel; biweekly seminar talks interleaved</span></li>
+      <li class="timeline__item"><span class="timeline__when">Week 6</span><span class="timeline__what">Mid-semester hackathon / red-teaming sprint</span></li>
+      <li class="timeline__item"><span class="timeline__when">Weeks 8&ndash;10</span><span class="timeline__what">Capstone work begins</span></li>
+      <li class="timeline__item"><span class="timeline__when">Weeks 10&ndash;12</span><span class="timeline__what">Research Fellowship applications open for Fundamentals graduates</span></li>
+      <li class="timeline__item"><span class="timeline__when">Weeks 12&ndash;14</span><span class="timeline__what">Capstone presentations / demo day</span></li>
+      <li class="timeline__item timeline__item--last"><span class="timeline__when">Week 15</span><span class="timeline__what">This cohort&rsquo;s graduates recruited as next semester&rsquo;s facilitators</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--dark" id="join">
+  <div class="section__inner section__inner--split">
+    <div>
+      <span class="eyebrow--sm">Stay in the loop</span>
+      <h2>Join our mailing list</h2>
+      <p class="section__intro">Get notified when applications open, a speaker is confirmed, or a cohort's capstones go live. No spam, unsubscribe anytime.</p>
+    </div>
+    <div>
+      <div class="form-cta form-cta--dark form-cta--compact">
+        <h3>Sign up in about 30 seconds</h3>
+        <p>Opens the ASICA mailing list form in a new tab.</p>
+        <a class="btn btn--solid" href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form" target="_blank" rel="noopener">Open sign-up form &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="footer__mark">ASICA</span>
+      <span class="footer__brand-tag">AI Safety Initiative at CMU Africa</span>
+    </div>
+    <div class="footer__links">
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="blog.html">Blog</a>
+      <a href="mailto:hello@asica.example">Email us</a>
+    </div>
+    <p class="footer__fine">Piloting Fall 2026 under the CMU Africa Research Club</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
