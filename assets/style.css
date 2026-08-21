@@ -158,11 +158,27 @@ hr.rule{ border:none; border-top:1px solid var(--line); margin:0; }
 .step p{ color:var(--muted); font-size:.88rem; margin:0; }
 
 /* program detail page */
-.detail-grid{ display:grid; grid-template-columns:2fr 1fr; gap:3rem; margin-top:1rem; }
+.detail-grid{ display:grid; grid-template-columns:2fr 1fr; gap:3rem; margin-top:1rem; align-items:start; }
 @media (max-width:860px){ .detail-grid{ grid-template-columns:1fr; } }
 .detail-list{ list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:.7rem; }
 .detail-list li{ padding-left:1rem; border-left:2px solid var(--line); font-size:.95rem; color:var(--ink); }
-.side-card{ background:var(--paper-2); border:1px solid var(--line); border-radius:14px; padding:1.5rem; }
+.side-card{ background:var(--paper-2); border:1px solid var(--line); border-radius:14px; padding:1.5rem; position:sticky; top:5.5rem; }
+@media (max-width:860px){ .side-card{ position:static; } }
+.status-highlight{ display:inline-block; background:var(--coral); color:#fff; font-weight:600; font-size:.92rem; padding:.85rem 1.25rem; border-radius:10px; margin:.25rem 0 1.75rem; }
+
+/* floating scroll-to-top */
+.scroll-top{
+  position:fixed; right:1.5rem; bottom:1.5rem; z-index:200;
+  width:46px; height:46px; border-radius:50%; border:none;
+  background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; opacity:0; visibility:hidden; transform:translateY(10px);
+  transition:opacity .2s ease, transform .2s ease, background .15s ease, visibility .2s;
+  box-shadow:0 8px 20px -8px rgba(0,0,0,.35);
+}
+.scroll-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); }
+.scroll-top:hover{ background:var(--coral); }
+.scroll-top svg{ width:20px; height:20px; }
+@media (max-width:640px){ .scroll-top{ right:1rem; bottom:1rem; width:42px; height:42px; } }
 .side-card dl{ margin:0; }
 .side-card dt{ font-family:var(--mono); font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; margin-top:1rem; }
 .side-card dt:first-child{ margin-top:0; }
