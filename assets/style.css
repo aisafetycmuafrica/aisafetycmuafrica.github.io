@@ -213,6 +213,9 @@ hr.rule{ border:none; border-top:1px solid var(--line); margin:0; }
 .timeline__item--last::before{ background:var(--teal); }
 .timeline__when{ font-family:var(--mono); font-size:.85rem; color:var(--coral); font-weight:500; }
 .timeline__what{ color:var(--ink); }
+.timeline__active{ color:var(--coral); }
+.timeline__active::before{ background:var(--coral); }
+.timeline__active .timeline__what{ color:var(--coral); }
 @media (max-width:620px){ .timeline__item{ grid-template-columns:1fr; gap:.3rem; } }
 .event-card{ border:1px solid var(--line); border-radius:14px; padding:1.4rem; background:var(--paper); display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:1rem; }
 .event-card__date{ font-family:var(--mono); font-size:.78rem; color:var(--coral); }
