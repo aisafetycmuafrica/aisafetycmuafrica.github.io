@@ -127,25 +127,26 @@
           <span class="eyebrow--sm">Coming up</span>
           <div class="event-card">
             <div>
-              <span class="event-card__date">Week 1</span>
-              <h3>Applications open for Track 1</h3>
+              <div class="event-card__head">
+                <span class="event-card__date">Weeks 1 to 2</span>
+                <span class="status status--open">Open</span>
+              </div>
+              <h3>Track 1 applications</h3>
             </div>
-            <a class="btn btn--small btn--ghost" href="#"
-              >Applications Close for Track 1</a
+            <a
+              class="btn btn--small btn--solid"
+              href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form"
+              target="_blank"
+              rel="noopener"
+              >Apply</a
             >
           </div>
           <div class="event-card">
             <div>
-              <span class="event-card__date">Week 2</span>
-              <h3>Applications close and reviewed for Track 1</h3>
-            </div>
-            <a class="btn btn--small btn--ghost" href="#"
-              >Review Process Begins for Track 1</a
-            >
-          </div>
-          <div class="event-card">
-            <div>
-              <span class="event-card__date">Week 6</span>
+              <div class="event-card__head">
+                <span class="event-card__date">Week 6</span>
+                <span class="status status--upcoming">Upcoming</span>
+              </div>
               <h3>Mid-semester hackathon</h3>
             </div>
             <a class="btn btn--small btn--ghost" href="programs/hackathon.html"
@@ -154,24 +155,16 @@
           </div>
           <div class="event-card">
             <div>
-              <span class="event-card__date">Biweekly</span>
+              <div class="event-card__head">
+                <span class="event-card__date">Biweekly</span>
+                <span class="status status--upcoming">Upcoming</span>
+              </div>
               <h3>AI Safety Seminar</h3>
             </div>
             <a class="btn btn--small btn--ghost" href="programs/seminar.html"
               >Details</a
             >
           </div>
-
-          <!--
-      Optional: embed a live Google Calendar the same way AISI (Georgia Tech) does.
-      Google Calendar → Settings → this calendar → "Integrate calendar" → copy the
-      embed src and drop it in an iframe here.
-    -->
-          <!--
-    <div class="calendar-embed">
-      <iframe src="REPLACE_WITH_GOOGLE_CALENDAR_EMBED_SRC" style="border:0" width="100%" height="500" frameborder="0"></iframe>
-    </div>
-    -->
         </div>
       </section>
 
@@ -179,6 +172,10 @@
         <div class="section__inner">
           <span class="eyebrow--sm">Full arc</span>
           <h2>How the semester runs</h2>
+          <p class="section__intro">
+            The complete, ordered story of a cohort, from recruitment through
+            demo day to next semester's facilitators.
+          </p>
           <ol class="timeline">
             <li class="timeline__item">
               <span class="timeline__when">Week 1 </span
@@ -231,6 +228,28 @@
               >
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner">
+          <span class="eyebrow--sm">Add to your calendar</span>
+          <h2>Never miss a session</h2>
+          <p class="calendar-note">
+            A live calendar of seminar talks, the hackathon, and key deadlines
+            will appear here. In the meantime, join the mailing list below to
+            get reminders.
+          </p>
+          <!--
+            FILL IN: Google Calendar embed src.
+            Google Calendar -> Settings -> this calendar -> "Integrate calendar"
+            -> copy the embed src and uncomment the block below.
+          -->
+          <!--
+          <div class="calendar-embed">
+            <iframe src="FILL_IN_GOOGLE_CALENDAR_EMBED_SRC" style="border:0" width="100%" height="500" frameborder="0"></iframe>
+          </div>
+          -->
         </div>
       </section>
 

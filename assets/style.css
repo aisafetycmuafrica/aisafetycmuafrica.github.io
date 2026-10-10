@@ -269,3 +269,36 @@ hr.rule{ border:none; border-top:1px solid var(--line); margin:0; }
 
 /* Team page */
 
+
+/* ============ BLOG ============ */
+/* post byline (post pages) */
+.post-byline{ font-family:var(--mono); font-size:.82rem; color:var(--coral); margin:0 0 1.1rem; }
+
+/* at-a-glance stat row (post pages) */
+.stat-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.5rem; }
+@media (max-width:620px){ .stat-row{ grid-template-columns:1fr; } }
+.stat{ border-top:2px solid var(--teal); padding-top:1rem; }
+.stat__num{ display:block; font-family:var(--display); font-weight:700; font-size:2rem; line-height:1; color:var(--navy); }
+.stat__label{ display:block; margin-top:.4rem; font-size:.9rem; color:var(--muted); }
+
+/* module overview grid (kickoff post) */
+.module-grid{ grid-template-columns:repeat(4,1fr); }
+@media (max-width:900px){ .module-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .module-grid{ grid-template-columns:1fr; } }
+.module-card h3{ margin-top:.35rem; font-size:1rem; }
+.module-card .track-card__top{ margin-bottom:0; }
+.module-num{ display:inline-flex; align-items:center; justify-content:center; width:1.9rem; height:1.9rem; border-radius:50%; background:var(--coral); color:#fff; font-family:var(--mono); font-size:.85rem; font-weight:500; }
+.module-card--current{ border-color:var(--coral); }
+
+/* blog index post cards */
+.post-list{ display:flex; flex-direction:column; gap:1.25rem; margin-top:1.5rem; }
+.post-card{ display:block; background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:1.6rem 1.75rem; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.post-card:hover{ transform:translateY(-3px); border-color:var(--teal); box-shadow:0 10px 24px -18px rgba(18,33,61,.4); }
+.post-card__date{ font-family:var(--mono); font-size:.78rem; color:var(--coral); }
+.post-card h3{ font-size:1.15rem; margin:.4rem 0 .5rem; }
+.post-card p{ color:var(--muted); font-size:.95rem; margin:0 0 .75rem; }
+.post-card__link{ font-family:var(--mono); font-size:.8rem; color:var(--teal); }
+
+/* ============ EVENTS — coming-up card header (date + status) ============ */
+.event-card__head{ display:flex; align-items:center; gap:.7rem; margin-bottom:.15rem; }
+.calendar-note{ color:var(--muted); font-size:.92rem; margin-top:.4rem; }
