@@ -121,8 +121,9 @@
           </h1>
           <p class="post-byline">ASICA Team &middot; 17 October 2026</p>
           <p class="hero__sub">
-            Unit 2: specifying the right goal is only half the problem. Getting
-            a system to actually pursue it is the other half.
+            A recap of our Unit 2 discussion: sorting real alignment failures
+            into outer vs inner, and walking the chain of an AI catastrophe
+            scenario.
           </p>
         </div>
       </section>
@@ -139,34 +140,109 @@
             things could go wrong even when nobody intends them to. It defines
             alignment, the problem of getting an AI to do what its creator
             wants, and introduces the two terms used throughout the course:
-            reward misspecification and goal misgeneralisation. In session, we
-            walk through one catastrophe scenario step by step and ask where a
-            different decision could have broken the chain.
+            reward misspecification and goal misgeneralisation. In session,
+            groups sorted real failure cases into outer or inner, then walked
+            through a catastrophe scenario step by step to ask where a different
+            decision could have broken the chain.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">This week's discussion</span>
+          <h2>Outer or inner? Sorting the failures</h2>
+          <p style="color: var(--muted)">
+            Unit 2 splits alignment failures in two. Outer misalignment (reward
+            misspecification) is when the goal we gave the system does not
+            capture what we want, so it optimises a proxy. Inner misalignment
+            (goal misgeneralisation) is when the system did well in training but
+            learned a different goal, which only shows up when conditions
+            change. In groups, members sorted four real cases, a model writing
+            convincing but false citations, a maze agent that keeps heading to
+            where exits used to be, a coding model gaming its score, and an
+            assistant that agrees with a user's wrong claim, deciding for each
+            whether it was outer, inner, or unclear, and what evidence would
+            settle it. The useful friction: the same case often got classified
+            differently depending on the lens a group took, which made the
+            outer/inner boundary feel real rather than tidy.
+          </p>
+
+          <h3 style="margin-top: 2.25rem">Walking the chain</h3>
+          <p style="color: var(--muted)">
+            Using "How we could stumble into AI catastrophe," groups took three
+            moments from the story, an early fix that only improves the surface,
+            training that teaches the system to hide bad behaviour, and a debate
+            about whether to slow down, and asked three questions of each: who
+            could have acted, what they would have done differently, and whether
+            the problem was visible at the time or only clear now. A recurring
+            answer was that companies could have tested more thoroughly to flag
+            harmful responses before deployment, and that much of the danger was
+            arguably visible at the time, not only in hindsight.
           </p>
         </div>
       </section>
 
       <section class="section section--muted">
         <div class="section__inner section__inner--narrow">
-          <span class="eyebrow--sm">Coming up next discussion</span>
-          <h2>Discussion prompts</h2>
+          <span class="eyebrow--sm">From the discussion</span>
+          <h2>Key takeaways</h2>
+          <p class="section__intro">
+            A theme across the room: whether a failure counts as outer or inner
+            often depends on the lens you use, and the same model can show both.
+          </p>
           <ul class="detail-list">
             <li>
-              Outer alignment (specifying the right goal) versus inner
-              alignment (getting the system to actually pursue it). Which feels
-              more solved to you right now, and which feels further away?
+              The core distinction landed: outer misalignment is a bad goal,
+              inner misalignment is a goal that was learned differently from the
+              one intended.
             </li>
             <li>
-              Walk through one step in "How we could stumble into AI
-              catastrophe." Was there a single clear stop point, or did it only
-              look avoidable in hindsight?
+              Classifying a real scenario is rarely clean, the boundary shifts
+              with the lens, and a single system can exhibit both kinds of
+              failure.
             </li>
             <li>
-              Is the difficulty here specific to deep learning, or would any
-              sufficiently capable optimization process run into the same
-              problem?
+              A practical takeaway: train models to follow the spirit of a rule,
+              not just the letter, and flag potential harms before deployment,
+              not after.
+            </li>
+            <li>
+              Real-world and African examples at the start of each session kept
+              surfacing, members noted they make the risks feel concrete rather
+              than abstract.
             </li>
           </ul>
+
+          <h3 style="margin-top: 2.25rem">What members took away</h3>
+          <p class="section__intro">A sample of what people said they learned:</p>
+          <ul class="detail-list">
+            <li>
+              "The difference between outer and inner misalignment, and that
+              classifying a scenario as one depends on the lens used."
+            </li>
+            <li>
+              "Seeing how both types of alignment can belong to the same model."
+            </li>
+            <li>
+              "The real-world cases were eye-opening, especially the African
+              ones, because they show this is real."
+            </li>
+            <li>
+              "AI can give false information with full confidence, so
+              double-check what it generates."
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 2.25rem">What we're improving</h3>
+          <p style="color: var(--muted)">
+            The clearest piece of feedback: discussion time is running short,
+            and group-work instructions can be ambiguous. For upcoming sessions
+            we are protecting more time for group discussion and providing
+            written instructions alongside the verbal brief. Members also asked
+            for the readings and materials to be easier to find ahead of time,
+            which we are addressing.
+          </p>
         </div>
       </section>
 
