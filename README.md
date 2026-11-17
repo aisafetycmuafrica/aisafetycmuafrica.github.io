@@ -41,6 +41,12 @@ This site is plain HTML/CSS/JS. Contributions of all sizes are welcome.
 5. **Open a pull request**: push your branch and open a PR describing what you changed and why.
 6. **Wait for review**: a maintainer will review; address feedback if requested, then the PR can be merged.
 
+## CMS migration (in progress)
+
+We're moving this site to a small CMS: a React + Vite frontend, a FastAPI backend, MySQL, and Cloudflare R2 for images. Start with **[docs/cms/](docs/cms/README.md)**: architecture, data model, API, local setup, and the [roadmap](docs/cms/roadmap.md) with ordered issues. Progress is tracked in the [epic issue](https://github.com/aisafetycmuafrica/aisafetycmuafrica.github.io/issues/29).
+
+Until cutover, the static site below stays the live site.
+
 ## Setup
 
 No build step. From the repo root, serve the folder with any static server:
