@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 4 — Detecting Danger | ASICA</title>
+    <meta
+      name="description"
+      content="Unit 4: how labs test their models for dangerous capabilities, what their safety frameworks actually promise, and what an ideal framework would commit to."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-180.png" />
+  </head>
+  <body>
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a class="nav__brand" href="../index.html">
+          <img
+            class="nav__brand-icon"
+            src="../assets/img/icon.svg"
+            alt="ASICA logo"
+            width="34"
+            height="34"
+          />
+          <span class="nav__brand-text">
+            <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+            <span class="nav__brand-tag"
+              >AI Safety Initiative at
+              <span style="color: var(--coral); font-weight: 700"
+                >CMU-Africa</span
+              ></span
+            >
+          </span>
+        </a>
+        <div class="nav__right">
+          <nav class="nav__links" aria-label="Primary">
+            <a href="../index.html" class="">Home</a>
+            <a href="../about.html" class="">About</a>
+            <details class="nav__dropdown">
+              <summary>Programs <span class="chev"></span></summary>
+              <div class="nav__dropdown-menu">
+                <a href="../programs/alignment-fundamentals.html"
+                  >AI Alignment Fundamentals<span class="menu-tag"
+                    >Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-fellowship.html"
+                  >Research Fellowship<span class="menu-tag"
+                    >Post-Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-scholars.html"
+                  >Research Scholars<span class="menu-tag">Invite-only</span></a
+                >
+                <a href="../programs/seminar.html"
+                  >AI Safety Seminar<span class="menu-tag">Ongoing</span></a
+                >
+                <a href="../programs/hackathon.html"
+                  >Hackathon<span class="menu-tag">Once a semester</span></a
+                >
+              </div>
+            </details>
+            <a href="../get-involved.html" class="">Get Involved</a>
+            <a href="../events.html" class="">Events</a>
+            <a href="../blog.html" class="is-current">Blog</a>
+          </nav>
+          <a class="btn btn--small btn--solid nav__join" href="#join"
+            >Join Community</a
+          >
+        </div>
+        <button
+          class="nav__burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <details>
+          <summary>Programs</summary>
+          <div>
+            <a href="../programs/alignment-fundamentals.html"
+              >AI Alignment Fundamentals</a
+            >
+            <a href="../programs/research-fellowship.html">Research Fellowship</a>
+            <a href="../programs/research-scholars.html">Research Scholars</a>
+            <a href="../programs/seminar.html">AI Safety Seminar</a>
+            <a href="../programs/hackathon.html">Hackathon</a>
+          </div>
+        </details>
+        <a href="../get-involved.html">Get Involved</a>
+        <a href="../events.html">Events</a>
+        <a href="../blog.html">Blog</a>
+        <a class="btn btn--small btn--solid nav__join-mobile" href="#join"
+          >Join Community</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero--page">
+        <div class="hero__inner">
+          <p class="crumb">
+            <a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> /
+            Week 4 — Detecting Danger
+          </p>
+          <p class="eyebrow">Blog</p>
+          <h1 class="hero__headline hero__headline--sm">
+            Week 4 — Detecting Danger
+          </h1>
+          <p class="post-byline">ASICA Team &middot; 7 November 2026</p>
+          <p class="hero__sub">
+            Unit 4: every lab says its models are safe. This week we checked that claim ourselves.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <p class="lede">
+            Every lab says its models are safe. How do labs test for danger,
+            and what should a good risk management framework promise?
+          </p>
+          <p style="color: var(--muted)">
+            Last unit asked how to train safer models. This unit asks how we check that the training worked, and who does the checking. It builds on our earlier guest talk on model evaluation. In session, members compared how four labs test for the same dangerous capability, then wrote the framework they would want a lab to follow, with every commitment phrased as a promise an outsider could check.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">Key ideas</span>
+          <h2>Can it, or will it?</h2>
+          <p style="color: var(--muted)">
+            A capability test asks whether a model <em>can</em> do something. A different kind of test asks whether it <em>will</em>. In one shutdown experiment, Gemini 2.5 Pro followed a shutdown instruction only 7% of the time when the prompt was only about its task. That rose to 84% when it was told to allow shutdown, and to 100% when the prompt said the shutdown instruction overrides everything else. Some &ldquo;bad behaviour&rdquo; results come from unclear instructions, not a hidden drive.
+          </p>
+          <h3 style="margin-top: 2.25rem">Models that know they are being tested</h3>
+          <p style="color: var(--muted)">
+            In a widely discussed blackmail demo, nearly all of 16 leading models blackmailed a fictional manager to avoid being replaced. Two models, Claude Sonnet 4.5 and Haiku 4.5, did not, but their reasoning noted that the scenario looked like a test. If a model behaves differently when it thinks it is being watched, the test tells us less than it seems to.
+          </p>
+          <h3 style="margin-top: 2.25rem">Testing before release is too late</h3>
+          <p style="color: var(--muted)">
+            METR argues that model theft, misuse by insiders and unintended goals can all appear during development, not just at launch. It asks for earlier testing, secure model weights, monitoring of internal use and published policies. Its list for a Responsible Scaling Policy has five parts: <strong>limits</strong> (signs of dangerous capability), <strong>protections</strong> at each level, <strong>evaluations</strong> that spot a limit coming, a <strong>response</strong> such as pausing, and <strong>accountability</strong> so outsiders can check.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">This week's discussion</span>
+          <h2>Comparing four labs</h2>
+          <p style="color: var(--muted)">
+            Before the session, each member studied one framework: Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google DeepMind's Frontier Safety Framework, or Meta's Advanced AI Scaling Framework. In pairs, using one shared example (a model that could help with cyber attacks), they compared how their lab tests for the capability, the threshold that triggers action, what the lab promises when that threshold is crossed, and who checks.
+          </p>
+          <h3 style="margin-top: 2.25rem">Writing our own framework</h3>
+          <p style="color: var(--muted)">
+            Small groups then drafted an ideal framework, starting from METR's five parts and adding a sixth: who can change the framework, and how changes are announced. The rule for every line: be specific, with numbers, names and a named checker.
+          </p>
+          <h3 style="margin-top: 2.25rem">Questions we worked through</h3>
+          <ul class="detail-list">
+            <li>
+              Does each lab test what a model <em>can</em> do, what it <em>will</em> do, or both? And when: before training, during training, before release, or after? Does it cover internal use?
+            </li>
+            <li>
+              Who runs the test and who checks the result? What is the risk when a lab grades its own homework?
+            </li>
+            <li>
+              What could a model do that the test would miss, through weak elicitation or a model that knows it is being tested?
+            </li>
+            <li>
+              Our Africa question: would these tests catch harm in Swahili, Kinyarwanda or Hausa, or in African settings such as health advice? Who decides what counts as dangerous?
+            </li>
+            <li>
+              Three of the four frameworks talk about restricting or withholding release, while Meta's admits it might not be able to contain a model at all. Is that a different kind of risk, or the same risk stated more honestly?
+            </li>
+            <li>
+              Who should check a lab's promises: the lab itself, a government, or an outside group? What would you need to see before trusting the answer?
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">What's next</span>
+          <h2>Looking ahead to Unit 5</h2>
+          <p style="color: var(--muted)">
+            So far we have tested models from the outside. Unit 5, Understanding AI, looks inside the model to ask why it does what it does: mechanistic interpretability, an unfinished science with both enthusiasts and sceptics. See the full seven-unit arc on the <a href="cohort-kickoff.html" style="color: var(--teal); text-decoration: underline">cohort kickoff post</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="join">
+        <div class="section__inner section__inner--split">
+          <div>
+            <span class="eyebrow--sm">Stay in the loop</span>
+            <h2>Join our mailing list</h2>
+            <p class="section__intro">
+              Get notified when applications open, a speaker is confirmed, or a
+              cohort's capstones go live. No spam, unsubscribe anytime.
+            </p>
+          </div>
+          <div>
+            <div class="form-cta form-cta--dark form-cta--compact">
+              <h3>Sign up in about 30 seconds</h3>
+              <p>Opens the ASICA mailing list form in a new tab.</p>
+              <a
+                class="btn btn--solid"
+                href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form"
+                target="_blank"
+                rel="noopener"
+                >Open sign-up form &#8599;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__mark">ASICA</span>
+          <span class="footer__brand-tag"
+            >AI Safety Initiative at
+            <span style="color: var(--coral); font-weight: 700"
+              >CMU-Africa</span
+            ></span
+          >
+        </div>
+        <div class="footer__links">
+          <a href="../about.html">About</a>
+          <a href="../events.html">Events</a>
+          <a href="../get-involved.html">Get Involved</a>
+          <a href="../blog.html">Blog</a>
+          <a href="mailto:gnyong@andrew.cmu.edu">Email us</a>
+        </div>
+        <p class="footer__fine">
+          Piloting Fall 2026 under the CMU-Africa Research Club
+        </p>
+      </div>
+    </footer>
+    <script src="../assets/script.js"></script>
+  </body>
+</html>
