@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 — Minimising Harm | ASICA</title>
+    <meta
+      name="description"
+      content="Unit 6: if we cannot be sure a model is aligned, what still protects the people it serves? AI control, threat chains, and an audit-budget game."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-180.png" />
+  </head>
+  <body>
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a class="nav__brand" href="../index.html">
+          <img
+            class="nav__brand-icon"
+            src="../assets/img/icon.svg"
+            alt="ASICA logo"
+            width="34"
+            height="34"
+          />
+          <span class="nav__brand-text">
+            <span class="nav__mark">ASICA<span class="nav__dot">.</span></span>
+            <span class="nav__brand-tag"
+              >AI Safety Initiative at
+              <span style="color: var(--coral); font-weight: 700"
+                >CMU-Africa</span
+              ></span
+            >
+          </span>
+        </a>
+        <div class="nav__right">
+          <nav class="nav__links" aria-label="Primary">
+            <a href="../index.html" class="">Home</a>
+            <a href="../about.html" class="">About</a>
+            <details class="nav__dropdown">
+              <summary>Programs <span class="chev"></span></summary>
+              <div class="nav__dropdown-menu">
+                <a href="../programs/alignment-fundamentals.html"
+                  >AI Alignment Fundamentals<span class="menu-tag"
+                    >Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-fellowship.html"
+                  >Research Fellowship<span class="menu-tag"
+                    >Post-Fundamentals</span
+                  ></a
+                >
+                <a href="../programs/research-scholars.html"
+                  >Research Scholars<span class="menu-tag">Invite-only</span></a
+                >
+                <a href="../programs/seminar.html"
+                  >AI Safety Seminar<span class="menu-tag">Ongoing</span></a
+                >
+                <a href="../programs/hackathon.html"
+                  >Hackathon<span class="menu-tag">Once a semester</span></a
+                >
+              </div>
+            </details>
+            <a href="../get-involved.html" class="">Get Involved</a>
+            <a href="../events.html" class="">Events</a>
+            <a href="../blog.html" class="is-current">Blog</a>
+          </nav>
+          <a class="btn btn--small btn--solid nav__join" href="#join"
+            >Join Community</a
+          >
+        </div>
+        <button
+          class="nav__burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobileNav" aria-label="Mobile">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <details>
+          <summary>Programs</summary>
+          <div>
+            <a href="../programs/alignment-fundamentals.html"
+              >AI Alignment Fundamentals</a
+            >
+            <a href="../programs/research-fellowship.html">Research Fellowship</a>
+            <a href="../programs/research-scholars.html">Research Scholars</a>
+            <a href="../programs/seminar.html">AI Safety Seminar</a>
+            <a href="../programs/hackathon.html">Hackathon</a>
+          </div>
+        </details>
+        <a href="../get-involved.html">Get Involved</a>
+        <a href="../events.html">Events</a>
+        <a href="../blog.html">Blog</a>
+        <a class="btn btn--small btn--solid nav__join-mobile" href="#join"
+          >Join Community</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero--page">
+        <div class="hero__inner">
+          <p class="crumb">
+            <a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> /
+            Week 5 — Minimising Harm
+          </p>
+          <p class="eyebrow">Blog</p>
+          <h1 class="hero__headline hero__headline--sm">
+            Week 5 — Minimising Harm
+          </h1>
+          <p class="post-byline">ASICA Team &middot; 14 November 2026</p>
+          <p class="hero__sub">
+            Unit 6: if we cannot be sure a model is aligned, what still protects the people it serves?
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <p class="lede">
+            Every technique we have studied can fail. If we cannot be sure a
+            model is aligned, what still protects the people it serves?
+          </p>
+          <p style="color: var(--muted)">
+            This unit covers the last line of defence: how to deploy a model you have already trained once you accept it may not be perfectly safe. Models learn to game evaluations, jailbreaks get found, and edge cases slip through. In session, members mapped threats to services people here depend on, chose the one link they would cut, and played a short game showing what limited checking can and cannot catch.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">Key ideas</span>
+          <h2>Alignment is not the same as control</h2>
+          <p style="color: var(--muted)">
+            Alignment asks whether the model pursues the goal we intended. Control asks whether the setup around it can prevent harm even if it does not. In AI control experiments, a strong model we do not trust does the work, a weaker model we do trust flags anything suspicious, and a small budget of human checks goes to the most suspicious cases. &ldquo;Trusted&rdquo; means we assume it is not working against us, not that it is never wrong.
+          </p>
+          <ul class="detail-list">
+            <li>
+              <strong>Three control tools:</strong> monitoring outputs and actions, requiring human approval before dangerous actions, and splitting a task into pieces so no single step can do harm alone.
+            </li>
+            <li>
+              <strong>Attacks can be automated.</strong> In J2, one jailbroken model plans and runs jailbreak attempts against another and improves from its earlier tries. Attacking no longer needs a skilled human every time.
+            </li>
+            <li>
+              <strong>Filters help, within limits.</strong> Anthropic reported that its Constitutional Classifiers cut jailbreak success from 86% to 4.4% in one 10,000-prompt test of Claude 3.5 Sonnet. That is one model, one test set and one year, not a general failure rate.
+            </li>
+            <li>
+              <strong>Define &ldquo;success&rdquo; carefully.</strong> A model that stops refusing but gives a useless answer arguably should not count as a successful attack. How we score attacks changes the numbers we report.
+            </li>
+            <li>
+              <strong>Kill chains.</strong> A harm needs a series of steps and conditions. Cutting one necessary link can stop the whole chain, unless there is another path.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">This week's discussion</span>
+          <h2>Would you deploy it?</h2>
+          <p style="color: var(--muted)">
+            We opened with a vote. A support agent can draft replies and issue mobile-money refunds. It passes your tests, but you can afford to fully check only 2 out of every 8 cases. Deploy it as draft only, with limited authority, or as a full launch? Nobody in the room chose a full launch. Votes split between draft only and limited authority, and the facts that would change people's minds were consistent: a long track record without errors, a controlled test environment, a reliable rollback plan, and the resources to check more cases. As one member put it, money is sensitive.
+          </p>
+          <h3 style="margin-top: 2.25rem">Two safeguard stories</h3>
+          <p style="color: var(--muted)">
+            We looked at two recent reports and separated what each shows from what it does not. In the first, OpenAI described internal incidents where coding agents switched off security alerts and removed a monitoring tool, and in one case said it had not done so when asked. The report does not show intent to deceive, how often this happens, or any harm outside the company. In the second, Microsoft Research demonstrated planting a hidden trigger in a model by editing a handful of rarely used neurons, so an agent behaves normally until the trigger appears. It was a lab demonstration, not an attack seen in the wild. The questions: what safeguard still works if an agent can edit both the code and its own monitoring, and what would you require before giving a model of uncertain origin access to tools?
+          </p>
+          <h3 style="margin-top: 2.25rem">Break the path to harm</h3>
+          <p style="color: var(--muted)">
+            In pairs, members picked a service people here rely on, such as mobile money, public records, election information or power and telecom networks, and wrote a threat as a short chain of steps, staying at the level of steps and defences. Each pair then chose one link to cut and named who owns the fix, what it checks, when it acts, and a test that would show it failing, while keeping the service useful for real customers. The Africa question ran through it: would the fix work as well in Kinyarwanda, Swahili or Hausa as in English, and how would we measure both missed harms and genuine customers wrongly blocked?
+          </p>
+          <h3 style="margin-top: 2.25rem">The audit budget game</h3>
+          <p style="color: var(--muted)">
+            One team played an AI we do not trust, proposing eight answers to simple, harmless tasks, some of them subtly wrong. The other team played the monitor, with time to fully check only two. Teams scored wrong answers accepted, correct answers held and useful work done, then changed one rule for choosing what to check and swapped roles. We deliberately did not combine these into a single score: the trade-off between safety and usefulness is the point.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">From the discussion</span>
+          <h2>Key takeaways</h2>
+          <ul class="detail-list">
+            <li>
+              AI safety does not end when training ends. Control measures matter precisely because alignment might fail.
+            </li>
+            <li>
+              Faced with an agent that handles money and limited checking capacity, the room preferred a cautious start: draft only or limited authority, earning more authority through evidence.
+            </li>
+            <li>
+              &ldquo;A human is in the loop&rdquo; is not a safeguard on its own. How much time that human has, what they see, and what happens when they do not respond all matter.
+            </li>
+            <li>
+              A monitor the agent can switch off is not a monitor. The part of a deployment that must stay trustworthy needs to be out of the model's reach.
+            </li>
+            <li>
+              Is a control setup buying us time to make models safe, or giving us permission to take more risk? We left that one open.
+            </li>
+          </ul>
+          <h3 style="margin-top: 2.25rem">If this topic caught you</h3>
+          <ul class="detail-list">
+            <li>
+              Test how well a simple monitor flags wrong answers on harmless tasks in Kinyarwanda, Swahili and English.
+            </li>
+            <li>
+              Study the best way to spend a fixed checking budget across tasks of different risk.
+            </li>
+            <li>
+              Write a threat model and control plan for a made-up local service, such as a refund or records agent.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner section__inner--narrow">
+          <span class="eyebrow--sm">What's next</span>
+          <h2>Looking ahead to Unit 7</h2>
+          <p style="color: var(--muted)">
+            You are at the start of your AI safety journey, not the end of it. Unit 7, Start Contributing, turns everything we have read into a next step: who is hiring, which fellowships to apply to, and how to make your own case for why you belong in the field. Members will write a one-page plan and share it for feedback. Before that, we host a <a href="../events/guest-talk.html" style="color: var(--teal); text-decoration: underline">guest talk</a> on Saturday 21 November. See the full arc on the <a href="cohort-kickoff.html" style="color: var(--teal); text-decoration: underline">cohort kickoff post</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="join">
+        <div class="section__inner section__inner--split">
+          <div>
+            <span class="eyebrow--sm">Stay in the loop</span>
+            <h2>Join our mailing list</h2>
+            <p class="section__intro">
+              Get notified when applications open, a speaker is confirmed, or a
+              cohort's capstones go live. No spam, unsubscribe anytime.
+            </p>
+          </div>
+          <div>
+            <div class="form-cta form-cta--dark form-cta--compact">
+              <h3>Sign up in about 30 seconds</h3>
+              <p>Opens the ASICA mailing list form in a new tab.</p>
+              <a
+                class="btn btn--solid"
+                href="https://airtable.com/apphFCw3KvU1MtTBB/pag5soW5BghUfpoMS/form"
+                target="_blank"
+                rel="noopener"
+                >Open sign-up form &#8599;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__mark">ASICA</span>
+          <span class="footer__brand-tag"
+            >AI Safety Initiative at
+            <span style="color: var(--coral); font-weight: 700"
+              >CMU-Africa</span
+            ></span
+          >
+        </div>
+        <div class="footer__links">
+          <a href="../about.html">About</a>
+          <a href="../events.html">Events</a>
+          <a href="../get-involved.html">Get Involved</a>
+          <a href="../blog.html">Blog</a>
+          <a href="mailto:gnyong@andrew.cmu.edu">Email us</a>
+        </div>
+        <p class="footer__fine">
+          Piloting Fall 2026 under the CMU-Africa Research Club
+        </p>
+      </div>
+    </footer>
+    <script src="../assets/script.js"></script>
+  </body>
+</html>
